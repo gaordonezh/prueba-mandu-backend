@@ -20,8 +20,14 @@ class DivisionController extends ApiController
         $divisions = Division::all();
 
         foreach ($divisions as $key => $div) {
-            $top_divisions = TopDivision::where('division_id', $div->id)->first();
-            $sub_divisions = SubDivision::where('division_id', $div->id)->get();
+            $top_divisions = TopDivision::where('division_id', $div->id)
+                ->join("divisions as d", "top_divisions.division_id", "=", "d.id")
+                ->select("d.name", "top_divisions.id")
+                ->first();
+            $sub_divisions = SubDivision::where('division_id', $div->id)
+                ->join("divisions as d", "sub_divisions.division_id", "=", "d.id")
+                ->select("d.name", "sub_divisions.id")
+                ->get();
 
             $divisions[$key]["top"] = $top_divisions;
             $divisions[$key]["sub"] = $sub_divisions;
