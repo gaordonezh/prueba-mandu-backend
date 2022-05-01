@@ -14,7 +14,8 @@ class TopDivisionFactory extends Factory
     public function definition()
     {
         return [
-            'division_id' => $this->faker->randomNumber(1, 5)
+            'division_id' => $this->faker->randomNumber(1, 5),
+            'top_division_id' => $this->faker->randomNumber(1, 5)
         ];
     }
 }

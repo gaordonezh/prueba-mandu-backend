@@ -15,6 +15,7 @@ class SubDivisionFactory extends Factory
     {
         return [
             'division_id' => $this->faker->randomNumber(1, 5),
+            'sub_division_id' => $this->faker->randomNumber(1, 5),
         ];
     }
 }
