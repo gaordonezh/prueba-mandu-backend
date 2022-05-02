@@ -1,6 +1,6 @@
 ## PRUEBA TÉCNICA - MANDU
 
-Proyecto desarrollador con Laravel 8.
+API-REST desarrollador con Laravel 8.
 
 Pasos para la instalación:
 
