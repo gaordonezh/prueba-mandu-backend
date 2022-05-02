@@ -5,8 +5,7 @@ Proyecto desarrollador con Laravel 8.
 Pasos para la instalación:
 
 -   Clonar el repositorio
-    Comando para instalar las dependencias
--   ### `composer install`
+-   ### `composer install` Comando para instalar las dependencias
 -   Clonar el archivo .env.example y nombrarlo .env en la raíz del proyecto
 -   Modificar el valor campo DB_DATABASE por prueba_mandu
 -   Crear una base datos con el nombre prueba_mandu
