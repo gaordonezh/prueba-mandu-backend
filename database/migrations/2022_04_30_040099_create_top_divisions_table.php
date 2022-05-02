@@ -15,8 +15,8 @@ class CreateTopDivisionsTable extends Migration
     {
         Schema::create('top_divisions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("division_id")->constrained("divisions");
-            $table->foreignId("top_division_id")->constrained("divisions");
+            $table->foreignId("division_id")->constrained("divisions")->onDelete("cascade");
+            $table->foreignId("top_division_id")->constrained("divisions")->onDelete("cascade");
             $table->timestamps();
         });
     }

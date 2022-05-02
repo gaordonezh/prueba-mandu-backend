@@ -15,8 +15,8 @@ class CreateSubDivisionsTable extends Migration
     {
         Schema::create('sub_divisions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('division_id')->constrained("divisions");
-            $table->foreignId('sub_division_id')->constrained("divisions");
+            $table->foreignId('division_id')->constrained("divisions")->onDelete("cascade");
+            $table->foreignId('sub_division_id')->constrained("divisions")->onDelete("cascade");
             $table->timestamps();
         });
     }
